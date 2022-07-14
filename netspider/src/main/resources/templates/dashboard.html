@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<#include "/common/head.html">
+
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+
+  <!-- Left side column. contains the logo and sidebar -->
+  <!-- Content Wrapper. Contains page content -->
+  <#include "/common/top.html">
+  <#include "/common/menu.html">
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Darshboard
+<!--        <small>preview of simple tables</small>-->
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+<!--        <li><a href="#">Tables</a></li>-->
+<!--        <li class="active">Simple</li>-->
+      </ol>
+    </section>
+    <section class="content">
+        <!-- /.row -->
+      <div class="row">
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-aqua">
+            <div class="inner">
+              <h3>${siteCount}</h3>
+
+              <p>Domain Sites</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-bag"></i>
+            </div>
+            <a href="${ctx.contextPath}/siteList" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-green">
+            <div class="inner">
+<!--              <h3>${jobCount}<sup style="font-size: 20px">%</sup></h3>-->
+              <h3>${jobCount}</h3>
+
+              <p>Jobs Count</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-stats-bars"></i>
+            </div>
+            <a href="${ctx.contextPath}/cronjob/index" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-yellow">
+            <div class="inner">
+              <h3>${resCount}</h3>
+
+              <p>LinkResouces</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-add"></i>
+            </div>
+            <a href="${ctx.contextPath}/linkres/index" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-red">
+            <div class="inner">
+              <h3>${joblogCount}</h3>
+
+              <p>Job Logs</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-pie-graph"></i>
+            </div>
+            <a href="${ctx.contextPath}/joblogs/index" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+      </div>
+        <div class="row" style="margin: 5px">
+            <div class="box box-success">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Table Data Chart</h3>
+
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                        </button>
+                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                    </div>
+                </div>
+                <div class="box-body">
+                    <div class="chart">
+                        <canvas id="barChart" style="height:600px"></canvas>
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+        </div>
+      </section>
+      <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <#include "/common/footer.html">
+  <#include "/common/siderbar.html">
+  <!-- Control Sidebar -->
+
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="${ctx.contextPath}/resources/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="${ctx.contextPath}/resources/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- ChartJS 1.0.1 -->
+<script src="${ctx.contextPath}/resources/plugins/chartjs/Chart.min.js"></script>
+<!-- Slimscroll -->
+<script src="${ctx.contextPath}/resources/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="${ctx.contextPath}/resources/plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="${ctx.contextPath}/resources/dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="${ctx.contextPath}/resources/dist/js/demo.js"></script>
+<script>
+
+    $(function () {
+
+        var  barChartData={
+            labels: ${tableList},
+            datasets: [
+                {
+                    label: "Count",
+                    fillColor: "#00a65a",
+                    // strokeColor: "rgba(210, 214, 222, 1)",
+                    pointColor: "rgba(210, 214, 222, 1)",
+                    pointStrokeColor: "#c1c7d1",
+                    // pointHighlightFill: "#fff",
+                    // pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: ${countList}
+                }
+            ]
+        };
+
+        var barChartCanvas = $("#barChart").get(0).getContext("2d");
+        var barChart = new Chart(barChartCanvas);
+
+        var barChartOptions = {
+
+            legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].fillColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>",
+            //Boolean - whether to make the chart responsive
+            responsive: true,
+            maintainAspectRatio: true
+        };
+
+        barChartOptions.datasetFill = false;
+        barChart.Bar(barChartData, barChartOptions);
+    });
+</script>
+</body>
+</html>

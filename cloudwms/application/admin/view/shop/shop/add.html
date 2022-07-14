@@ -1,0 +1,280 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Address1')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-address1" data-rule="required" class="form-control" name="row[address1]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Address2')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-address2" data-rule="required" class="form-control" name="row[address2]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Checkout_api_supported')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-checkout_api_supported" data-rule="required" class="form-control" name="row[checkout_api_supported]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('City')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <div class='control-relative'><input id="c-city" data-rule="required" class="form-control" data-toggle="city-picker" name="row[city]" type="text" value=""></div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Country')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-country" data-rule="required" class="form-control" name="row[country]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Country_code')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-country_code" data-rule="required" class="form-control" name="row[country_code]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Country_name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-country_name" data-rule="required" class="form-control" name="row[country_name]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('County_taxes')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-county_taxes" data-rule="required" class="form-control" name="row[county_taxes]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Email')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-email" data-rule="required" class="form-control" name="row[email]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Currency')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-currency" data-rule="required" class="form-control" name="row[currency]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Domain')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-domain" data-rule="required" class="form-control" name="row[domain]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Enabled_presentment_currencies')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-enabled_presentment_currencies" data-rule="required" class="form-control" name="row[enabled_presentment_currencies]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Eligible_for_card_reader_giveaway')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-eligible_for_card_reader_giveaway" data-rule="required" class="form-control" name="row[eligible_for_card_reader_giveaway]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Eligible_for_payments')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-eligible_for_payments" data-rule="required" class="form-control" name="row[eligible_for_payments]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Has_discounts')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-has_discounts" data-rule="required" class="form-control" name="row[has_discounts]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Has_gift_cards')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-has_gift_cards" data-rule="required" class="form-control" name="row[has_gift_cards]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Has_storefront')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-has_storefront" data-rule="required" class="form-control" name="row[has_storefront]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Iana_timezone')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-iana_timezone" data-rule="required" class="form-control" name="row[iana_timezone]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Latitude')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-latitude" data-rule="required" class="form-control" step="0.00000001" name="row[latitude]" type="number" value="0.00000000">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Longitude')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-longitude" data-rule="required" class="form-control" step="0.00000001" name="row[longitude]" type="number" value="0.00000000">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Money_format')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-money_format" data-rule="required" class="form-control" name="row[money_format]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Money_in_emails_format')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-money_in_emails_format" data-rule="required" class="form-control" name="row[money_in_emails_format]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Money_with_currency_format')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-money_with_currency_format" data-rule="required" class="form-control" name="row[money_with_currency_format]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Money_with_currency_in_emails_format')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-money_with_currency_in_emails_format" data-rule="required" class="form-control" name="row[money_with_currency_in_emails_format]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Multi_location_enabled')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-multi_location_enabled" data-rule="required" class="form-control" name="row[multi_location_enabled]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Myshopify_domain')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-myshopify_domain" data-rule="required" class="form-control" name="row[myshopify_domain]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-name" data-rule="required" class="form-control" name="row[name]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Password_enabled')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-password_enabled" data-rule="required" class="form-control" name="row[password_enabled]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Phone')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-phone" data-rule="required" class="form-control" name="row[phone]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Province')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-province" data-rule="required" class="form-control" name="row[province]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Province_code')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-province_code" data-rule="required" class="form-control" name="row[province_code]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Shop_owner')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-shop_owner" data-rule="required" class="form-control" name="row[shop_owner]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Taxes_included')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-taxes_included" data-rule="required" class="form-control" name="row[taxes_included]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Tax_shipping')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-tax_shipping" data-rule="required" class="form-control" name="row[tax_shipping]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Zip')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-zip" data-rule="required" class="form-control" name="row[zip]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Timezone')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-timezone" data-rule="required" class="form-control" name="row[timezone]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Weight_unit')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-weight_unit" data-rule="required" class="form-control" name="row[weight_unit]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Create_time')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-create_time" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[create_time]" type="text" value="{:date('Y-m-d H:i:s')}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Update_time')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-update_time" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[update_time]" type="text" value="{:date('Y-m-d H:i:s')}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Delete_time')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-delete_time" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[delete_time]" type="text" value="{:date('Y-m-d H:i:s')}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Type')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-type" data-rule="required" class="form-control" name="row[type]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Finder_user_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-finder_user_id" data-rule="required" data-source="finder/user/index" class="form-control selectpage" name="row[finder_user_id]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Apikey')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-apiKey" data-rule="required" class="form-control" name="row[apiKey]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Apisecretkey')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-apiSecretKey" data-rule="required" class="form-control" name="row[apiSecretKey]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Access_token')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-access_token" data-rule="required" class="form-control" name="row[access_token]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

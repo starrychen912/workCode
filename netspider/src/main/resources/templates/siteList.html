@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<#include "/common/head.html">
+
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+
+  <!-- Left side column. contains the logo and sidebar -->
+  <!-- Content Wrapper. Contains page content -->
+  <#include "/common/top.html">
+  <#include "/common/menu.html">
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        All Sites
+<!--        <small>preview of simple tables</small>-->
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Sites</a></li>
+<!--        <li><a href="#">Tables</a></li>-->
+<!--        <li class="active">Simple</li>-->
+      </ol>
+    </section>
+    <section class="content">
+        <!-- /.row -->
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="box">
+              <div class="box-header">
+                <h3 class="box-title">Sites List Table</h3>
+
+                <div class="box-tools">
+                  <div class="input-group input-group-sm" style="width: 150px;">
+                    <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
+
+                    <div class="input-group-btn">
+                      <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.box-header -->
+              <div class="box-body table-responsive no-padding">
+                <table class="table table-hover">
+                  <tbody><tr>
+                    <th>ID</th>
+                    <th>domainName</th>
+                    <th>domainUrl</th>
+                    <th>status</th>
+                    <th>description</th>
+                  </tr>
+                  <#if siteDomainList?? && (siteDomainList?size > 0) >
+                    <#list siteDomainList as siteDomain>
+                        <tr>
+                          <td>${siteDomain.id}</td>
+                          <td><a href="${ctx.contextPath}/cronjob/index?siteId=${siteDomain.id}">${siteDomain.domainName}</a></td>
+                          <td>${siteDomain.domainUrl}</td>
+                          <#if siteDomain.status=="ENABLE">
+                          <td><span class="label label-success">${siteDomain.status}</span> </td>
+                          <#elseif siteDomain.status=="DISABLE">
+                          <td><span class="label label-warning">${siteDomain.status}</span> </td>
+                          <#elseif siteDomain.status=="DELETE">
+                          <td><span class="label label-danger">${siteDomain.status}</span> </td>
+                        </#if>
+
+                  <td>${siteDomain.description}</td>
+                        </tr>
+                    </#list>
+                </#if>
+
+                  </tbody></table>
+              </div>
+              <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+          </div>
+        </div>
+      </section>
+      <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <#include "/common/footer.html">
+  <#include "/common/siderbar.html">
+  <!-- Control Sidebar -->
+
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="${ctx.contextPath}/resources/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="${ctx.contextPath}/resources/bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="${ctx.contextPath}/resources/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="${ctx.contextPath}/resources/plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="${ctx.contextPath}/resources/dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="${ctx.contextPath}/resources/dist/js/demo.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+/**
+ * 简体中文配置
+ */
+ export default{
+  title:"町町信息",
+  route:{
+    home:'首页',
+    ImportStoreShop:'待导入产品列表',
+    Products:'商品列表',
+    Orderlist:"订单列表",
+    Notifications:"通知",
+    FindProducts:'查找商品',
+    StoreShop:"店铺管理",
+    Stocklog:"库存日志",
+    setting:'设置',
+    help:"帮助",
+    OrderAll:"订单管理",
+  },
+  home:{
+    homename:"首页",
+    unit:'￥',
+    order:'总订单',
+    Awaiting:'等待发货',
+    Sales:"总销售额",
+    Orders:"总销售订单",
+    Costs:"总成本",
+    Earnings:"总利润",
+    topitem:"置顶订单",
+    Notifications:'通知',
+  }
+}

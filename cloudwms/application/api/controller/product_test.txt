@@ -1,0 +1,125 @@
+Title=Geekria EJB01 高品质头戴式耳机收纳盒， 尼龙外表防水耐磨高档，高密度加厚外壳抗压防摔，柔软天鹅绒内里防震防刮。送耳机配件收纳袋，耳机收纳包适用于森海塞尔，索尼，爱科技，骷髅头等中大型耳机 (黑色)&Brand=GEEKRIA&RecommendedBrowseNode=1397651071&ProductData=CE&ProductType=MediaPlayerOrEReaderAccessory&SKU=EJB-0001-01&StandardProductID=6920180210133&StandardProductIDType=UPC&Description=<p>
+<b>Geekria耳机包，为您的耳机提供全方位保护</b><br>
+- 采用加厚EVA贴上加硬加密加韧的尼龙压制成的硬盒耳机包具有更好的抗压能力，可以减少或者避免受到外物的挤压或者不小心摔落或者被液体喷溅淋湿时对耳机产生的损坏<br>
+- 使用耳机包可以有效防护耳机放置在空气中受到灰尘和湿气带来的影响<br>
+- 耳机包配套的网袋，可以根据您的使用习惯或者频率放置您的一些小配件，例如耳机线，充电器，内存卡以及播放器，让您的耳机包内部更整洁<br>
+- 当您出外旅行，您可以通过耳机包提手轻松携带或者把耳机包放置到您行李箱或者背包里面<br>
+</p>
+<p>
+<b>兼容耳机型号:</b><br>
+- 森海塞尔 Sennheiser HD650, HD600, HD598, HD558, HD518, HD595, HD555, HD515, HD280 pro, HD280, HD380 Pro, HD201, HD419, HD429, HD429s, HD439, HD449, PC323D, PC350, PC363D, MM 500-X, MOMENTUM, URBANITE<br>
+- 索尼 Sony v700dj, 7509hd, 7506, XB-700, XB-950AP, MDRZX770BT, MDR-RF985RK, MDR Z7, MDR ZX770BT<br>
+- 爱科技 AKG K553pro, K514, K512, K511, K540, K44, K77, K99<br>
+- 铁三角 ATH-SJ1, SJ3, SJ55, ATH-ES5, ATH-ES55, ATH-ES7, ATH-SQ5, ATH-ESW9, ATH-ESW10 <br>
+- 爱科技 AKG K518, K518DJ, K81, K520, N60, K490, K495, Y55, Y50 <br>
+- 天龙DENON AH-5000, Pioneer HDJ-2000, Philips Fidelio L1 <br>
+- Beats Studio1.0,Studio2.0,Wireless 2.0无线蓝牙录音师<br>
+- JBL EVEREST 700,  EVEREST 300 <br>
+- V-MODA Crossfade <br>
+- House of Marley EM-DH003, EM-FH033 Liberate XL, EM-FH041 XLBT Over-Ear case<br>
+- 松下 Panasonic RP-HTX7 <br>
+以及更多相近大小的中大型头戴式耳机<br>
+</p>
+<p>
+* 本商品不包含耳机<br>
+* 图片中所示产品的颜色因灯光和显示器的不同会有所差异，请以实物为准。
+</p>&BulletPoint1=黑色加硬加粗高弹性定制热压尼龙，加厚75度EVA，橙色加厚天鹅绒，精美耳机包提手，在您户外，上下班或旅行的时候提供更好的保护。&BulletPoint2=两层设计活动网袋，可以合理分配放置您的耳机线，数据线，IPOD音乐播放器，充电器，内存卡等耳机配件；方形包体设计，让您有更多的空间存储您更多小物品。&BulletPoint3=耳机包尺寸：长22cm宽19cm厚9.6cm，适合型号有：森海塞尔Sennheiser HD598, HD558, HD518, HD595, HD555, HD515, HD650, HD600,索尼Sony v700dj, 7509hd, 7506，爱科技AKG K 553pro, 514, 512, 511, 540, K44, K77, K99等中大型耳机 (更多合适型号请参考商品描述)。&BulletPoint4=售后服务：如果您购买的耳机包不合适您的耳机或者三个月内有损坏，全额退款或者免费更换。客服电话: 0755-25668011, 微信号: 集智商贸&BulletPoint5=商品包含：耳机包1个，活动网袋1个。&Manufacturer=GEEKRIA|EJB-0001-01&SearchTerms1=耳机包&SearchTerms2=&SearchTerms3=&SearchTerms4=&SearchTerms5=&PackageDimensionsLength=24&PackageDimensionsWidth=21&PackageDimensionsHeight=10&PackageDimensionsWeight=0.33&MfrPartNumber=EJB01-01
+
+
+
+// /**
+    //  * 产品导入
+    //  *
+    //  */
+    // public function import()
+    // {
+    //     set_time_limit(0);
+    //     $list = $this->tocurl("http://fc.geekria.cn/api/shopify.php",array('token:SP2021','language:zh','region:GZ'),['mod'=>'get_items']);
+    //     $list = json_decode($list,1);
+    //     // var_dump($list['data'][0]['Brand']);die;
+    //     foreach ($list['data'] as $k => $v){
+    //       // var_dump($v);die;
+    //       if(!empty($v['Brand'])){
+    //         $brand_id = Db::name('product_brand')->where(['name'=>$v['Brand']])->value('id');
+        
+    //         if(!$brand_id){
+    //             $brand_data = [
+    //                     'name'  =>  $v['Brand'],
+    //                     'create_time'  => time()
+    //                 ];
+    //             $brand_id = Db::name('product_brand')->insertGetId($brand_data);
+    //         }
+    //       }else{
+    //         $brand_id = 0;
+    //       }
+          
+
+    //       $sku_insert_data = [
+    //           'title'  => $v['Title'],
+    //           'description'  => $v['Description'],
+    //           'brand_id'  => $brand_id,
+    //           'category_id'  => 1,
+    //           'product_type'  => $v['StandardProductIDType'],
+    //           'create_time'  => time(),
+    //           'published_at'  => time()
+    //       ];
+
+    //       $product_id = Db::name('product')->insertGetId($sku_insert_data);
+
+    //       if($product_id){
+
+    //         $variants_insert_data = [
+    //           'product_id'  => $product_id,
+    //           'sku'  => $v['SKU'],
+    //           'barcode'  => $v['StandardProductID'],
+    //           'bullet_point1'  => $v['BulletPoint1'],
+    //           'bullet_point2'  => $v['BulletPoint2'],
+    //           'bullet_point3'  => $v['BulletPoint3'],
+    //           'bullet_point4'  => $v['BulletPoint4'],
+    //           'bullet_point5'  => $v['BulletPoint5'],
+    //           'cost'  => $v['Price'],
+    //           'create_time'  => time(),
+    //         ];
+
+    //         $variant_id = Db::name('product_variants')->insertGetId($variants_insert_data);
+    //         if($variant_id){
+    //           foreach ($v['Image'] as $img){
+    //               $images_insert_data = [
+    //                 'product_id'  => $product_id,
+    //                 'src'  => $img,
+    //                 'variant_ids'  => $variant_id,
+    //                 'create_time'  => time(),
+    //               ];
+
+    //               Db::name('product_images')->insertGetId($images_insert_data);
+    //           }
+    //         }
+            
+    //       }
+          
+    //     // $this->success('请求成功');die;
+    //     }
+        
+        
+        
+        
+        
+        
+    //     // var_dump($list);
+    //     // $this->success('请求成功');
+    // }
+
+    public function updatePP()
+    {
+        set_time_limit(0);
+        $list = $this->tocurl("http://fc.geekria.cn/api/shopify.php",array('token:SP2021','language:zh','region:GZ'),['mod'=>'get_items']);
+        $list = json_decode($list,1);
+        // var_dump($list['data'][0]['Brand']);die;
+        foreach ($list['data'] as $k => $v){
+          $product_id = Db::name('product_variants')->where(['sku'=>$v['SKU']])->value('product_id');
+          if($product_id>0){
+            Db::name('product')->where(['id'=>$product_id])->update(['out_link'=>$v['AmazonLink']]);
+          }
+        }
+        $this->success('请求成功');
+    }

@@ -1,0 +1,32 @@
+<?php
+
+return [
+    'Id'                 => 'ID',
+    'Sku'                => 'sku',
+    'Product_id'         => '产品ID',
+    'Finder_user_id'     => '用户ID',
+    'Description'        => '描述',
+    'Image_ids'          => '展示图片',
+    'Status'             => '状态',
+    'Create_time'        => '创建时间',
+    'Update_time'        => '更新时间',
+    'Delete_time'        => '删除时间',
+    'Is_inport'          => '已导入',
+    'Is_inport 0'        => '未导入',
+    'Is_inport 1'        => '已导入',
+    'Body_html'          => '产品描述',
+    'Handle'             => '产品标识',
+    'Product_type'       => '产品类型',
+    'Published_at'       => '发布时间',
+    'Title'              => '标题',
+    'Supplier_id'        => '供应商',
+    'Category_id'        => '分类ID',
+    'Brand_id'           => '品牌ID',
+    'Shop_id'            => '店铺id',
+    'Product_data'       => '产品数据',
+    'Out_link'           => '外链',
+    'Shopify_product_id' => 'shopify产品id',
+    'Tag_ids'            => '标签id',
+    'Country_id'         => '国家id',
+    'Hscode'             => '海关代码'
+];

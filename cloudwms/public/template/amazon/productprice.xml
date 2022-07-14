@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<AmazonEnvelope xsi:noNamespaceSchemaLocation="amzn-envelope.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Header>
+        <DocumentVersion>1.01</DocumentVersion>
+        <MerchantIdentifier>A3F9BCC6PZGEFO</MerchantIdentifier>
+    </Header>
+    <MessageType>Price</MessageType>
+    <Message>
+        <MessageID>1</MessageID>
+        <Price>
+            <SKU>{$sku}</SKU>
+            {if $compare_at_price != 0}
+            <StandardPrice currency="USD">{$compare_at_price}</StandardPrice>
+            {/if}
+            <!-- 特卖价格-->
+            {if $sale_price != 0}
+           <Sale>
+               <StartDate>{$StartDate}</StartDate>
+               <EndDate>{$EndDate}</EndDate>
+               <SalePrice currency="USD">{$sale_price}</SalePrice>
+           </Sale>
+           {/if}
+        </Price>
+    </Message>
+</AmazonEnvelope>

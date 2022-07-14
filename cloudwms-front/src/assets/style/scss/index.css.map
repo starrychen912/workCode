@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": ";ACAA;;GAEG;ACFH;;GAEG",
+    "sources": [
+        "index.scss",
+        "global-variables.scss",
+        "main.scss"
+    ],
+    "names": [],
+    "file": "index.css"
+}

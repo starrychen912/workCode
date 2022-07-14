@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<#include "/common/head.html">
+
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+
+  <!-- Left side column. contains the logo and sidebar -->
+  <!-- Content Wrapper. Contains page content -->
+  <#include "/common/top.html">
+  <#include "/common/menu.html">
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        All Jobs
+<!--        <small>preview of simple tables</small>-->
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+<!--        <li><a href="#">Tables</a></li>-->
+<!--        <li class="active">Simple</li>-->
+      </ol>
+    </section>
+    <section class="content">
+        <!-- /.row -->
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="box">
+              <div class="box-header">
+                <h3 class="box-title">Responsive Hover Table</h3>
+
+                <div class="box-tools">
+                  <div class="input-group input-group-sm" style="width: 150px;">
+                    <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
+
+                    <div class="input-group-btn">
+                      <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="nav-tabs-custom">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#cronJob" data-toggle="tab" aria-expanded="true">定时任务</a></li>
+                <li class=""><a href="#mainJob" data-toggle="tab" aria-expanded="false">非定时任务</a></li>
+              </ul>
+                <div class="tab-content">
+                   <div class="tab-pane active" id="cronJob">
+                     <table class="table table-hover">
+                       <tbody><tr>
+                         <th>ID</th>
+                         <th>domainName</th>
+                         <th>jobName</th>
+                         <th>jobCode</th>
+                         <th>status</th>
+                         <th>jobType</th>
+                         <th>remark</th>
+                         <th>Operation</th>
+                       </tr>
+                       </tbody>
+                       <#if cronJobList?? && (cronJobList?size > 0) >
+                       <#list cronJobList as cronJob>
+                           <#if cronJob.jobType!="MAIN" >
+                           <tr>
+                             <td>${cronJob.id}</td>
+                             <td>${cronJob.siteDomain.domainName}</td>
+                             <td>${cronJob.jobName}</td>
+                             <td>${cronJob.jobCode}</td>
+                             <#if cronJob.status=="ENABLE">
+                             <td><span class="label label-success">${cronJob.status}</span> </td>
+                             <#elseif cronJob.status=="DISABLE">
+                             <td><span class="label label-warning">${cronJob.status}</span> </td>
+                             <#elseif cronJob.status=="DELETE">
+                             <td><span class="label label-danger">${cronJob.status}</span> </td>
+                              </#if>
+                           <td>${cronJob.jobType}</td>
+                           <td>${cronJob.remark}</td>
+                           <#if cronJob.status=="ENABLE">
+                           <td><a href="${ctx.contextPath}/joblogs/index">JobLogs</a> </td>
+                           <#else>
+                           <td></td>
+                         </#if>
+                           </tr>
+                           </#if>
+                       </#list>
+                       </#if>
+                     </table>
+
+
+
+                  </table>
+                   </div>
+                  <div class="tab-pane" id="mainJob">
+                   <table class="table table-hover">
+                            <tbody><tr>
+                              <th>ID</th>
+                              <th>domainName</th>
+                              <th>jobName</th>
+                              <th>jobCode</th>
+                              <th>status</th>
+                              <th>jobType</th>
+                              <th>remark</th>
+                              <th>Operation</th>
+                            </tr>
+                            </tbody>
+                            <#if cronJobList?? && (cronJobList?size > 0) >
+                            <#list cronJobList as cronJob>
+                            <#if cronJob.jobType=="MAIN" >
+                              <tr>
+                                <td>${cronJob.id}</td>
+                                <td>${cronJob.siteDomain.domainName}</td>
+                                <td>${cronJob.jobName}</td>
+                                <td>${cronJob.jobCode}</td>
+                                <#if cronJob.status=="ENABLE">
+                                <td><span class="label label-success">${cronJob.status}</span> </td>
+                                <#elseif cronJob.status=="DISABLE">
+                                <td><span class="label label-warning">${cronJob.status}</span> </td>
+                                <#elseif cronJob.status=="DELETE">
+                                <td><span class="label label-danger">${cronJob.status}</span> </td>
+                              </#if>
+                              <td>${cronJob.jobType}</td>
+                              <td>${cronJob.remark}</td>
+                             <#if cronJob.status=="ENABLE">
+                              <td><a href="${ctx.contextPath}/cronjob/startJob?jobId=${cronJob.id}">Start</a> </td>
+                             <#else>
+                            <td></td>
+                           </#if>
+                            </tr>
+                              </#if>
+                            </#list>
+                          </#if>
+
+                      </table>
+                      </div>
+              </div>
+
+            </div>
+            <!-- /.box -->
+          </div>
+        </div>
+      </section>
+      <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <#include "/common/footer.html">
+  <#include "/common/siderbar.html">
+  <!-- Control Sidebar -->
+
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+<!-- jQuery 2.2.3 -->
+<script src="${ctx.contextPath}/resources/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="${ctx.contextPath}/resources/bootstrap/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="${ctx.contextPath}/resources/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="${ctx.contextPath}/resources/plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="${ctx.contextPath}/resources/dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="${ctx.contextPath}/resources/dist/js/demo.js"></script>
+</body>
+</html>

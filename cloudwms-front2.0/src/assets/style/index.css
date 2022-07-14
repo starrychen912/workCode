@@ -1,0 +1,14 @@
+.el-card__body{
+    padding: 0px !important;
+    display: inline;
+    
+}
+.el-collapse-item__header{
+    border-bottom: 0px !important;
+    padding: 0px 20px;
+    height: 110px;
+}
+.el-row{
+    height: auto;
+}
+

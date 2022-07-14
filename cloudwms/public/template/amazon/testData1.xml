@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<AmazonEnvelope xsi:noNamespaceSchemaLocation="amzn-envelope.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Header>
+        <DocumentVersion>1.01</DocumentVersion>
+        <MerchantIdentifier>A3F9BCC6PZGEFO</MerchantIdentifier>
+    </Header>
+    <MessageType>Product</MessageType>
+    <Message>
+        <MessageID>1</MessageID>
+        <OperationType>Update</OperationType>
+		<Product>
+			<SKU>DY-TEST-001-08</SKU>
+			<StandardProductID>
+				<Type>UPC</Type>
+				<Value>726367280793</Value>
+			</StandardProductID>
+			<LaunchDate>2022-01-01T00:00:00</LaunchDate>
+			<ReleaseDate>2022-01-01T00:00:00</ReleaseDate>
+			<Condition>
+				<ConditionType>New</ConditionType>
+				<ConditionNote></ConditionNote>
+			</Condition>
+			<ItemPackageQuantity>1</ItemPackageQuantity>
+			<NumberOfItems>1</NumberOfItems>
+			<DescriptionData>
+				<Title>Elevated Dog Bowls, Raised Dog Bowls, Stainless Steel Dog Bowls for Small and Medium Dogs, Dog Food Bowl, Cat Bowls with Stand (Large)--dy update</Title>
+				<Brand>CYZB</Brand>
+				<Description>
+					<![CDATA[<p>
+					<b>Color</b>Orange</p>
+					<p>
+					<b>Material:</b>Stainless Steel and Melamine</p>
+					<p>
+					A slanted bowl prevents food from sticking around the bottom rim of the conventional bowl where dog/cat can't get it. What's more, it enabled your cat/dog to eat easier as the bowl is on a slanted angle, aiding your pet's digestion in the process. </p>
+					<b>OUR MONEY-BACK GUARANTEE: </b>CHRUNONE offers a 100% money-back guarantee, we will offer a 30-day money back guarantee on this product only if purchased directly from CHRUNONE. To ensure customer satisfaction end up happy.
+					</p>]]>
+				</Description>
+				<BulletPoint><![CDATA[Elevated dog bowls - ergonomic 15 degrees tilted design makes the food concentrate on the bottom and makes your pet easy to empty the food, as well as reduces risk of "bloat" And indigestion]]></BulletPoint>
+				<BulletPoint><![CDATA[Non-spill dog bowl with stand - dogs tend to stack Food to the edge, higher round arc design makes food not easy to overflow the edge]]></BulletPoint>
+				<BulletPoint><![CDATA[Stainless steel dog bowls stable and non-slip - hard to turn over, heavy-duty stand with non-slip feet]]></BulletPoint>
+				<BulletPoint><![CDATA[Raised dog bowls easy to clean - both melamine stand and stainless steel bowl are dishwasher safe, Super easy to clean and wipe]]></BulletPoint>
+				<BulletPoint><![CDATA[Product Size: 7.4" x8.6" x 5.1" (19X22X13cm)]]></BulletPoint>
+				<ItemDimensions>
+					<Length unitOfMeasure="CM">12</Length>
+					<Width unitOfMeasure="CM">20</Width>
+					<Height unitOfMeasure="CM">10</Height>
+					<Weight unitOfMeasure="GR">600</Weight>
+				</ItemDimensions>
+				<PackageDimensions>
+					<Length unitOfMeasure="CM">19</Length>
+					<Width unitOfMeasure="CM">22</Width>
+					<Height unitOfMeasure="CM">13</Height>
+					<Weight unitOfMeasure="GR">627</Weight>
+				</PackageDimensions>
+				<ShippingWeight unitOfMeasure="GR">0.50</ShippingWeight>
+				<MSRP>12.99</MSRP>
+				<Manufacturer>CYZB</Manufacturer>
+				<MfrPartNumber>SHYPCWL00901</MfrPartNumber>
+				<SearchTerms>Elevated Dog Bowls, Raised Dog Bowls, Stainless Steel Dog Bowls for Large Dogs, Dog Food Bowl, Cat Bowls with Stand</SearchTerms>
+				<ItemType>Pet-Bowls</ItemType>
+				<UnitCount>1</UnitCount>
+				<PPUCountType>Count</PPUCountType>
+				<IsExpirationDatedProduct>0</IsExpirationDatedProduct>
+			</DescriptionData>
+			<ProductData>
+				<PetSupplies>
+					<ProductType>
+						<PetSuppliesMisc>
+						</PetSuppliesMisc>
+					</ProductType>
+				</PetSupplies>
+			</ProductData> 
+		</Product>
+    </Message>
+</AmazonEnvelope>

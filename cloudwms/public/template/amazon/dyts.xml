@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<AmazonEnvelope xsi:noNamespaceSchemaLocation="amzn-envelope.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Header>
+        <DocumentVersion>1.01</DocumentVersion>
+        <MerchantIdentifier>A3F9BCC6PZGEFO</MerchantIdentifier>
+    </Header>
+    <MessageType>Product</MessageType>
+    <Message>
+        <MessageID>1</MessageID>
+        <OperationType>Update</OperationType>
+		<Product>
+			<SKU>DY-TS-055-01</SKU>
+			<StandardProductID>
+				<Type>UPC</Type>
+				<Value>726367280816</Value>
+			</StandardProductID>
+			<Condition>
+				<ConditionType>New</ConditionType>
+				<ConditionNote></ConditionNote>
+			</Condition>
+			<ItemPackageQuantity>1</ItemPackageQuantity>
+			<NumberOfItems>1</NumberOfItems>
+			<DescriptionData>
+				<Title>2 Pack Pool Floats for Adults, Swimming Pool Float Hammock, Multi-Purpose Hammock Pool Lounge Chair Float with Inflator Pump</Title>
+				<Brand>LUEXBOX</Brand>
+				<Description><![CDATA[<p>
+<b>Material:</b>PVC<br>
+</p>
+<p>
+<b>Include:</b>Pool Floats X 2, Inflator Pump X 1<br>
+</p>
+<p>
+Pool floats are foldable and portable. Just fold it or roll it up, then you can take them for outdoor vacation. More importantly, easy storage for next use.<br>
+Relaxing each muscle in your body with the pool floats and loungers, floating headrest and footrest are positioned to support swimmers for hours of relaxing in the pool, enjoy every moment in your vacation.<br>
+</p>]]></Description>
+				
+				<PackageDimensions>
+					<Length unitOfMeasure="CM">29</Length>
+					<Width unitOfMeasure="CM">27</Width>
+					<Height unitOfMeasure="CM">5</Height>
+					<Weight unitOfMeasure="GR">700</Weight>
+				</PackageDimensions>
+
+				<Manufacturer>JANKOW</Manufacturer>
+				<MfrPartNumber>BOXSHYPHWL5501</MfrPartNumber>
+				<SearchTerms>Pool Floats for Adults, Swimming Pool Float Hammock, Swimming Floating Chair, Water Hammock, Multi-Purpose Inflatable Hammock, Pool Mattress Floats for Adults</SearchTerms>
+				<ItemType>inflatable-water-toys</ItemType>
+				<RecommendedBrowseNode>2528109011</RecommendedBrowseNode>
+			</DescriptionData>
+			<ProductData>
+				<Home>
+				  <ProductType>
+					<Kitchen>
+					</Kitchen>
+				  </ProductType>
+				</Home>
+			</ProductData>
+		</Product>
+    </Message>
+</AmazonEnvelope>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<AmazonEnvelope xsi:noNamespaceSchemaLocation="amzn-envelope.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Header>
+        <DocumentVersion>1.01</DocumentVersion>
+        <MerchantIdentifier>A3F9BCC6PZGEFO</MerchantIdentifier>
+    </Header>
+    <MessageType>Product</MessageType>
+    <Message>
+        <MessageID>1</MessageID>
+        <OperationType>Update</OperationType>
+		<Product>
+			<SKU>{$product.sku}</SKU>
+			<StandardProductID>
+				<Type>{$product.barcode_type}</Type>
+				<Value>{$product.barcode}</Value>
+			</StandardProductID>
+			<LaunchDate>{$product.launchDate}</LaunchDate>
+			<ReleaseDate>{$product.releaseDate}</ReleaseDate>
+			<Condition>
+				<ConditionType>{$product.conditionType}</ConditionType>
+				<ConditionNote>{$product.conditionNote}</ConditionNote>
+			</Condition>
+			<ItemPackageQuantity>{$product.itemPackageQuantity}</ItemPackageQuantity>
+			<NumberOfItems>{$product.numberOfItems}</NumberOfItems>
+			<DescriptionData>
+				<Title>{$product.title}</Title>
+				<Brand>{$product.brand}</Brand>
+				<Description>
+					{$product.description}
+				</Description>
+				<BulletPoint>{$product.BulletPoint1}</BulletPoint>
+				<BulletPoint>{$product.BulletPoint2}</BulletPoint>
+				<BulletPoint>{$product.BulletPoint3}</BulletPoint>
+				<BulletPoint>{$product.BulletPoint4}</BulletPoint>
+				<BulletPoint>{$product.BulletPoint5}</BulletPoint>
+				<ItemDimensions>
+					<Length unitOfMeasure="{$product.dimensions_unit}">{$product.length}</Length>
+					<Width unitOfMeasure="{$product.dimensions_unit}">{$product.width}</Width>
+					<Height unitOfMeasure="{$product.dimensions_unit}">{$product.height}</Height>
+					<Weight unitOfMeasure="{$product.weight_unit}">{$product.weight}</Weight>
+				</ItemDimensions>
+				<PackageDimensions>
+					<Length unitOfMeasure="{$product.package_dimensions_unit}">{$product.package_length}</Length>
+					<Width unitOfMeasure="{$product.package_dimensions_unit}">{$product.package_width}</Width>
+					<Height unitOfMeasure="{$product.package_dimensions_unit}">{$product.package_height}</Height>
+					<Weight unitOfMeasure="{$product.package_weight_unit}">{$product.package_weight}</Weight>
+				</PackageDimensions>
+				<ShippingWeight unitOfMeasure="{$product.shipping_weight_unit}">{$product.shipping_weight}</ShippingWeight>
+				<MSRP>{$product.market_price}</MSRP>
+				<Manufacturer>{$product.manufacturer}</Manufacturer>
+				<MfrPartNumber>{$product.mfrPartNumber}</MfrPartNumber>
+				<SearchTerms>{$product.searchTerms}</SearchTerms>
+				<ItemType>{$product.item_type}</ItemType>
+				<UnitCount>{$product.UnitCount}</UnitCount>
+				<PPUCountType>{$product.PPUCountType}</PPUCountType>
+				<IsExpirationDatedProduct>{$product.IsExpirationDatedProduct}</IsExpirationDatedProduct>
+			</DescriptionData>
+			<ProductData>
+				<{$product.first_product_type}>
+					<ProductType>
+						<{$product.second_product_type}>
+						</{$product.second_product_type}>
+					</ProductType>
+				</{$product.first_product_type}>
+			</ProductData> 
+		</Product>
+    </Message>
+</AmazonEnvelope>

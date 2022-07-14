@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<#include "/common/head.html">
+
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+
+  <!-- Left side column. contains the logo and sidebar -->
+  <!-- Content Wrapper. Contains page content -->
+  <#include "/common/top.html">
+  <#include "/common/menu.html">
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Data List
+<!--        <small>preview of simple tables</small>-->
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Data List</a></li>
+<!--        <li><a href="#">Tables</a></li>-->
+<!--        <li class="active">Simple</li>-->
+      </ol>
+    </section>
+    <section class="content">
+        <!-- /.row -->
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="box">
+              <div class="box-header">
+                <h3 class="box-title">JData List Table</h3>
+
+                <div class="box-tools">
+                  <form id="searchForm">
+                  <div class="input-group input-group-sm" style="width: 150px;">
+                    <input type="hidden" name="cronJob" id="cronJob" value="${queryVO.cronJob!}">
+                    <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
+
+                    <div class="input-group-btn">
+                      <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                    </div>
+                  </div>
+                  </form>
+                </div>
+              </div>
+              <!-- /.box-header -->
+              <div class="box-body table-responsive no-padding">
+                <table class="table table-hover" id="dataList">
+<!--                  data-pagination="true"-->
+<!--                       data-search="true" data-url="${ctx.contextPath}/jobtasks/list" data-pageList="20, 50, 100" data-pageSize="20" data-queryParams="queryParams">-->
+                  <thead>
+                  <tr>
+                    <th data-field="id">ID</th>
+                    <th data-field="createDate">StartDate</th>
+                    <th data-field="jobName" data-formatter="jobNameFomatter">jobName</th>
+                    <th data-field="jobCode" data-formatter="jobCodeFomatter">jobCode</th>
+                    <th data-field="jobLogs">jobLogs</th>
+                  </tr>
+                  </thead>
+                </table>
+              </div>
+              <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+          </div>
+          <div class="row box-body table-responsive no-padding">
+          </div>
+        </div>
+
+      </section>
+
+      <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <#include "/common/footer.html">
+  <#include "/common/siderbar.html">
+  <!-- Control Sidebar -->
+
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- jQuery 2.2.3 -->
+<script src="${ctx.contextPath}/resources/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="${ctx.contextPath}/resources/bootstrap/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.20.0/dist/bootstrap-table.min.css">
+<script src="https://unpkg.com/bootstrap-table@1.20.0/dist/bootstrap-table.min.js"></script>
+
+
+<!-- Slimscroll -->
+<script src="${ctx.contextPath}/resources/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="${ctx.contextPath}/resources/plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="${ctx.contextPath}/resources/dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script language="JavaScript">
+
+  $(function() {
+    $("#dataList").bootstrapTable({
+      url: "${ctx.contextPath}/jobtasks/list",
+      sortable: true,
+      contentType: "application/x-www-form-urlencoded",
+      method: 'GET',
+      pagination: true,  //分页
+      sidePagination: "server", //服务端处理分页
+      pageNum: 1,//默认显示第1页
+      onlyInfoPagination:false,
+      pageSize: 20,//页面默认显示多少条
+      pageList: [ 15, 20, 40, 50 ,100],//可供选择的页面条数下拉框
+      striped: true,//斑马线效果
+      showRefresh: true,//刷新按钮
+      showColumns: true,//可以勾选隐藏或显示特定列
+      clickToSelect: true,//是否启用点击选中
+      queryParams: queryParams,
+      onLoadSuccess: function () {
+        console.log("表格数据渲染成功");
+      }
+    });
+
+    // function queryParams(params){
+    //
+    //   return {
+    //     "pageNumber": params.pageNumber,
+    //     "pageSize": params.pageSize,
+    //     "cronJob": queryVal
+    //   }
+    // }
+  });
+
+  function queryParams(params){
+      pageSize=params.limit;
+    pageNumber=Math.ceil(params.offset/pageSize)+1;
+    return {
+      "pageNumber": pageNumber,
+      "pageSize": pageSize,
+      "cronJob": $("#cronJob").val()
+    }
+  };
+
+  function jobNameFomatter(value,row,index){
+    return row.cronJob.jobName;
+  }
+
+  function jobCodeFomatter(value,row,index){
+    return row.cronJob.jobCode;
+  }
+</script>
+
+<!-- ./wrapper -->
+
+
+</body>
+</html>

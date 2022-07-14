@@ -1,0 +1,166 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Sku')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-sku" data-rule="required" class="form-control" name="row[sku]" type="text" value="{$row.sku|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Product_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-product_id" data-rule="required" data-source="product/index" class="form-control selectpage" name="row[product_id]" type="text" value="{$row.product_id|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Finder_user_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-finder_user_id" data-rule="required" data-source="finder/user/index" class="form-control selectpage" name="row[finder_user_id]" type="text" value="{$row.finder_user_id|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Description')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-description" data-rule="required" class="form-control" name="row[description]" type="text" value="{$row.description|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Image_ids')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-image_ids" data-rule="required" data-source="image/index" data-multiple="true" class="form-control selectpage" name="row[image_ids]" type="text" value="{$row.image_ids|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Status')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-status" data-rule="required" class="form-control" name="row[status]" type="number" value="{$row.status|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Create_time')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-create_time" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[create_time]" type="text" value="{:$row.create_time?datetime($row.create_time):''}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Update_time')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-update_time" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[update_time]" type="text" value="{:$row.update_time?datetime($row.update_time):''}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Delete_time')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-delete_time" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[delete_time]" type="text" value="{:$row.delete_time?datetime($row.delete_time):''}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Is_inport')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-is_inport" data-rule="required" class="form-control selectpicker" name="row[is_inport]">
+                {foreach name="isInportList" item="vo"}
+                    <option value="{$key}" {in name="key" value="$row.is_inport"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Body_html')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-body_html" data-rule="required" class="form-control" name="row[body_html]" type="text" value="{$row.body_html|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Handle')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-handle" data-rule="required" class="form-control" name="row[handle]" type="text" value="{$row.handle|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Product_type')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-product_type" data-rule="required" class="form-control" name="row[product_type]" type="text" value="{$row.product_type|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Published_at')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-published_at" data-rule="required" class="form-control" name="row[published_at]" type="number" value="{$row.published_at|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Title')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-title" data-rule="required" class="form-control" name="row[title]" type="text" value="{$row.title|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Supplier_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-supplier_id" data-rule="required" data-source="supplier/index" class="form-control selectpage" name="row[supplier_id]" type="text" value="{$row.supplier_id|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Category_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-category_id" data-rule="required" data-source="category/selectpage" data-params='{"custom[type]":"product_import"}' class="form-control selectpage" name="row[category_id]" type="text" value="{$row.category_id|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Brand_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-brand_id" data-rule="required" data-source="brand/index" class="form-control selectpage" name="row[brand_id]" type="text" value="{$row.brand_id|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Shop_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-shop_id" data-rule="required" data-source="shop/index" class="form-control selectpage" name="row[shop_id]" type="text" value="{$row.shop_id|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Product_data')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-product_data" data-rule="required" class="form-control" name="row[product_data]" type="text" value="{$row.product_data|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Out_link')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-out_link" data-rule="required" class="form-control" name="row[out_link]" type="text" value="{$row.out_link|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Shopify_product_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-shopify_product_id" data-rule="required" data-source="shopify/product/index" class="form-control selectpage" name="row[shopify_product_id]" type="text" value="{$row.shopify_product_id|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Tag_ids')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-tag_ids" data-rule="required" data-source="tag/index" data-multiple="true" class="form-control selectpage" name="row[tag_ids]" type="text" value="{$row.tag_ids|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Country_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-country_id" data-rule="required" data-source="country/index" class="form-control selectpage" name="row[country_id]" type="text" value="{$row.country_id|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Hscode')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-HScode" data-rule="required" class="form-control" name="row[HScode]" type="text" value="{$row.HScode|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,37 @@
+/**
+ * 全局主题变量配置
+ */
+
+@charset "utf-8";
+$base-color-primary-btn:linear-gradient(to right, #386aff, #75aef3, #1b82ff);
+$base-color-primary-Bg:linear-gradient(to right, #386aff, #6aa2ff);
+//字体颜色
+$font-text-color:#62628d;
+//主题颜色
+$color-bg:#409eff;
+$bgcolor-hover:#ecf5ff;
+//边框颜色
+$border-color:#dcdfe6;
+$el-main-bg:#eee;
+$el-color:#fff;
+:root {
+    //主题色
+    --sidebar-nav-background--color: #304156;
+    //副颜色
+    --sidebar-nav-deputy-background--color: #000;
+    //主字体颜色
+    --sidebar-color: #fff;
+    //hover
+    --sidebar-hover-background-color: #409EFF;
+    --sidebar-hover-color: #fff;
+    //active
+    --sidebar-active-background-color: #409EFF;
+    --sidebar-active-color: #fff;
+    --sidebar-active-border-background-color: #409EFF;
+}
+
+// .el-table {
+//     --el-table-border: 1px solid #000;
+//     --el-table-border-color: #000;
+//     --el-border-color-lighter: #000;
+// }

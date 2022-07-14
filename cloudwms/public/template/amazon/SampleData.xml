@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<AmazonEnvelope xsi:noNamespaceSchemaLocation="amzn-envelope.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Header>
+        <DocumentVersion>1.02</DocumentVersion>
+        <MerchantIdentifier>A3F9BCC6PZGEFO</MerchantIdentifier>
+    </Header>
+    <MessageType>Product</MessageType>
+    <Message>
+        <MessageID>1</MessageID>
+        <OperationType>Update</OperationType>
+		<Product>
+			<SKU>JK-JJL-0001-01</SKU>
+			<StandardProductID>
+				<Type>UPC</Type>
+				<Value>726367281561</Value>
+			</StandardProductID>
+			<LaunchDate>2022-01-01T00:00:00</LaunchDate>
+			<ReleaseDate>2022-01-01T00:00:00</ReleaseDate>
+			<Condition>
+				<ConditionType>New</ConditionType>
+				<ConditionNote></ConditionNote>
+			</Condition>
+			<ItemPackageQuantity>1</ItemPackageQuantity>
+			<NumberOfItems>1</NumberOfItems>
+			<DescriptionData>
+				<Title>Headphone Stand / Headset Holder / Desk Display Hanger Under-Desk Headphone Stand Mount Wooden Headphone Hanger Holder with Adhesive Sticky for Home and Office</Title>
+				<Brand>OEM</Brand>
+				<Description>
+
+				&lt;p&gt;
+				Holds securly under your desk surface using strong 3M VBH tape
+				&lt;/p&gt;
+				&lt;p&gt; 
+
+				&lt;b&gt;Compatible Headphones:&lt;/b&gt;&lt;br&gt; 
+				- Bose QuietComfort QC3, QC2, QC15, QC25, AE, AE2, TP-1, Soundtrue&lt;br&gt; 
+				- Grado SR60, SR80, M1, SR225, SR325, RA2, RS1&lt;br&gt; 
+				- ATH-SJ1, SJ3, SJ55, ATH-ES5, ATH-ES55, ATH-ES7, ATH-SQ5, ATH-ESW9, ATH-ESW10 &lt;br&gt; 
+				- AKG K518, K518DJ, K81, K520 &lt;br&gt; 
+				- JBL, TMG81W, TMG81B, ON-EAR J03B, J03S Tempo&lt;br&gt;  
+				- SONY MDR-XB900, MDR-XB910, MDR-XB920, MDR-7506, MDR-V6&lt;br&gt; 
+				- Sennheiser HD-201, HD-202 II , RS0120&lt;br&gt;
+				- Parrot Zik &lt;br&gt; 
+				- Beats Studio, Solo, Solo2&lt;br&gt;
+				And many other headphones &lt;br&gt;
+				&lt;/p&gt; 
+				&lt;p&gt; 
+				&lt;b&gt;Note:&lt;/b&gt;&lt;br&gt; 
+				- Headphone stand only, Headphone is not included.&lt;br&gt; 
+				&lt;/p&gt; 
+				&lt;p&gt; 
+				&lt;b&gt;Package Includes:&lt;/b&gt;&lt;br&gt; 
+				- 1 x Headphone Stand &lt;br&gt; 
+				&lt;/p&gt; 
+				&lt;p&gt; 
+				(Colors shown in pictures may slightly differ from actual product due to lighting and color settings.)  
+				&lt;/p&gt;
+
+				</Description>
+				<BulletPoint>
+
+				Universal Professional Headphone Hanger Holder.
+
+				</BulletPoint>
+				<BulletPoint>
+
+				High-quality wood , easy to install.
+
+				</BulletPoint>
+				<BulletPoint>
+
+				There is a few millimeter error, because of handmade article.
+
+				</BulletPoint>
+
+				<BulletPoint>
+
+				Product Dimensions: 2.56 * 1.57 * 2.95 inches (6.5 * 4 * 7.5  cm)
+
+				</BulletPoint>
+				<ItemType>headphone-accessories</ItemType>
+			</DescriptionData>
+			<ProductData>
+				<CE>
+					<ProductType>
+						<AudioVideoAccessory>
+						</AudioVideoAccessory>
+					</ProductType>
+				</CE>
+			</ProductData>
+		</Product>
+    </Message>
+</AmazonEnvelope>

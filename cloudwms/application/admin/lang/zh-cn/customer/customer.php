@@ -1,0 +1,38 @@
+<?php
+
+return [
+    'Email'                        => '客户邮箱',
+    'Accepts_marketing'            => '是否接收营销邮件',
+    'Accepts_marketing 0'          => '不接收',
+    'Accepts_marketing 1'          => '接收',
+    'Accepts_marketing_updated_at' => '接收修改时间',
+    'Last_name'                    => '姓氏',
+    'First_name'                   => '名字',
+    'State'                        => '状态',
+    'State 0'                      => '未激活',
+    'State 1'                      => '已发送',
+    'State 2'                      => '已激活',
+    'State 3'                      => '拒绝',
+    'Country'                      => '国家',
+    'Currency'                     => '币种',
+    'Last_order_id'                => '最后一个订单的 ID',
+    'Phone'                        => '电话号码',
+    'Tags'                         => '客户的标签',
+    'Last_order_name'              => '最后一个订单的名称',
+    'Marketing_opt_in_level'       => '邮件接收等级',
+    'Marketing_opt_in_level 0'     => 'single_opt_in',
+    'Marketing_opt_in_level 1
+'   => 'confirmed_opt_in',
+    'Marketing_opt_in_level 2'     => 'unknown',
+    'Marketing_opt_in_level 3'     => 'null',
+    'Note'                         => '客户说明',
+    'Tax_exempt'                   => '是否收税',
+    'Tax_exempt 0'                 => '收税',
+    'Tax_exempt 1'                 => '不收税',
+    'Total_spent'                  => '总花费',
+    'Verified_email'               => '已验证邮箱',
+    'Orders_count'                 => '订单总数',
+    'Create_time'                  => '创建时间',
+    'Update_time'                  => '更新时间',
+    'Delete_time'                  => '删除时间'
+];

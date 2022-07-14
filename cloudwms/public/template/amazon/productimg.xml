@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<AmazonEnvelope xsi:noNamespaceSchemaLocation="amzn-envelope.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Header>
+        <DocumentVersion>1.01</DocumentVersion>
+        <MerchantIdentifier>A3F9BCC6PZGEFO</MerchantIdentifier>
+    </Header>
+    <MessageType>ProductImage</MessageType>
+    <Message>
+        <MessageID>1</MessageID>
+        <OperationType>Update</OperationType>
+        <ProductImage>
+            <SKU>{$sku}</SKU>
+            <ImageType>{$type}</ImageType>
+            <!-- 用http开头的图片地址，不要用https开头的-->
+            <ImageLocation>{$location}</ImageLocation>
+            <!-- <ImageType>PT2</ImageType>
+            <ImageLocation>http://amazon.jankow.com.cn/uploads/product/0BAC024C6C5A2CA3174B8A5C854A562F.jpg</ImageLocation>
+            <ImageType>PT3</ImageType>
+            <ImageLocation>http://amazon.jankow.com.cn/uploads/product/0D3FBB7DA991119ADED57A872C10F227.jpg</ImageLocation> -->
+        </ProductImage>
+    </Message>
+</AmazonEnvelope>

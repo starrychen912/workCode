@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<#include "/common/head.html">
+
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+
+  <!-- Left side column. contains the logo and sidebar -->
+  <!-- Content Wrapper. Contains page content -->
+  <#include "/common/top.html">
+  <#include "/common/menu.html">
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Job Tasks
+<!--        <small>preview of simple tables</small>-->
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> JobTasks</a></li>
+<!--        <li><a href="#">Tables</a></li>-->
+<!--        <li class="active">Simple</li>-->
+      </ol>
+    </section>
+    <section class="content">
+        <!-- /.row -->
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="box">
+              <div class="box-header">
+                <h3 class="box-title">Job Tasks Table</h3>
+
+                <div class="box-tools">
+                  <form id="searchForm">
+                  <div class="row input-group">
+                      <div class="col-md-1"><label for="cronJob">Job:</label></div>
+                      <div class="col-md-2">
+                    <select name="cronJob" id="cronJob" class="form-control" >
+                        <option value="">All</option>
+                        <#if cronJobs?? && (cronJobs?size > 0) >
+                        <#list cronJobs as cronJob>
+                             <option value="${cronJob.id}">${cronJob.jobCode}</option>
+                        </#list>
+                      </#if>
+                    </select>
+                  </div>
+                      <div class="col-md-1"><label for="cronJob">Status:</label></div>
+                      <div class="col-md-2">
+                      <select name="jobStatus" id="jobStatus" class="form-control">
+                          <option value="">All</option>
+                          <#list jobStatus as jobStatus>
+                          <option value="${jobStatus.name()}">${jobStatus.name()}</option>
+                        </#list>
+                      </select>
+                      </div>
+                      <div class="col-md-1"><label for="cronJob">ResType:</label></div>
+                      <div class="col-md-2">
+                          <select name="resourcesType" id="resourcesType" class="form-control">
+                              <option value="">All</option>
+                              <#list resourcesTypes as resourcesType>
+                              <option value="${resourcesType.name()}">${resourcesType.name()}</option>
+                          </#list>
+                          </select>
+                      </div>
+                      <div class="col-md-2">
+                    <input type="text" name="keyWord" id="keyWord" class="form-control" placeholder="Search">
+                      </div>
+                      <div class="col-md-1">
+                        <div class="input-group-btn">
+                          <button type="button" class="btn btn-default" onclick="search()"><i class="fa fa-search"></i></button>
+                        </div>
+                      </div>
+                     </form>
+                  </div>
+
+                </div>
+              </div>
+              <!-- /.box-header -->
+              <div class="box-body table-responsive no-padding">
+                <table class="table table-hover" id="dataList">
+<!--                  data-pagination="true"-->
+<!--                       data-search="true" data-url="${ctx.contextPath}/jobtasks/list" data-pageList="20, 50, 100" data-pageSize="20" data-queryParams="queryParams">-->
+                  <thead>
+                  <tr>
+<!--                    <th data-field="id">ID</th>-->
+                    <th data-field="createDate">StartDate</th>
+                    <th data-field="jobName" data-formatter="jobNameFomatter">jobName</th>
+                    <th data-field="jobCode" data-formatter="jobCodeFomatter">jobCode</th>
+                      <th data-field="jobStatus" data-formatter="statusFomatter">status</th>
+                      <th data-field="linkResource" data-formatter="linkFomatter">linkResource</th>
+                    <th data-field="jobLog">jobLog</th>
+                  </tr>
+                  </thead>
+                </table>
+              </div>
+              <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+          </div>
+          <div class="row box-body table-responsive no-padding">
+          </div>
+        </div>
+
+      </section>
+
+      <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <#include "/common/footer.html">
+  <#include "/common/siderbar.html">
+  <!-- Control Sidebar -->
+
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- jQuery 2.2.3 -->
+<script src="${ctx.contextPath}/resources/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="${ctx.contextPath}/resources/bootstrap/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.20.0/dist/bootstrap-table.min.css">
+<script src="https://unpkg.com/bootstrap-table@1.20.0/dist/bootstrap-table.min.js"></script>
+
+
+<!-- Slimscroll -->
+<script src="${ctx.contextPath}/resources/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="${ctx.contextPath}/resources/plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="${ctx.contextPath}/resources/dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script language="JavaScript">
+
+  $(function() {
+
+      initTable();
+
+    // function queryParams(params){
+    //
+    //   return {
+    //     "pageNumber": params.pageNumber,
+    //     "pageSize": params.pageSize,
+    //     "cronJob": queryVal
+    //   }
+    // }
+  });
+
+  var dataTable;
+  function initTable(){
+
+
+      dataTable= $("#dataList").bootstrapTable({
+          url: "${ctx.contextPath}/joblogs/list",
+          sortable: true,
+          contentType: "application/x-www-form-urlencoded",
+          method: 'GET',
+          pagination: true,  //分页
+          sidePagination: "server", //服务端处理分页
+          pageNum: 1,//默认显示第1页
+          onlyInfoPagination:false,
+          pageSize: 20,//页面默认显示多少条
+          pageList: [ 15, 20, 40, 50 ,100],//可供选择的页面条数下拉框
+          striped: true,//斑马线效果
+          showRefresh: true,//刷新按钮
+          showColumns: true,//可以勾选隐藏或显示特定列
+          clickToSelect: true,//是否启用点击选中
+          queryParams: queryParams,
+          onLoadSuccess: function () {
+              console.log("表格数据渲染成功");
+          }
+      });
+
+
+  }
+
+  function search(){
+      $("#dataList").bootstrapTable("refresh");
+  }
+
+  function queryParams(params){
+      pageSize=params.limit;
+    pageNumber=Math.ceil(params.offset/pageSize)+1;
+    return {
+      "pageNumber": pageNumber,
+      "pageSize": pageSize,
+      "cronJob": $("#cronJob").val(),
+        "jobStatus": $("#jobStatus").val(),
+        "resourcesType":$("#resourcesType").val(),
+        "keyWord":$("#keyWord").val()
+    }
+  };
+
+  function jobNameFomatter(value,row,index){
+    return row.jobTask.cronJob.jobName;
+  }
+
+  function jobCodeFomatter(value,row,index){
+    return row.jobTask.cronJob.jobCode;
+  }
+
+  function statusFomatter(value,row,index){
+      if("START"==value){
+         return "<span class=\"label label-info\">"+value+"</span>"
+      }else if("PROCESSING"==value){
+          return "<span class=\"label label-primary\">"+value+"</span>"
+      }else if("FAILED"==value){
+          return "<span class=\"label label-danger\">"+value+"</span>"
+      }else if("COMPLETE"==value){
+          return "<span class=\"label label-success\">"+value+"</span>"
+      }
+      return value;
+  }
+
+  function linkFomatter (value,row,index){
+      if(row.linkResource!=null){
+          return row.linkResource.linkUrl;
+      }
+      return "";
+  }
+</script>
+
+<!-- ./wrapper -->
+
+
+</body>
+</html>
